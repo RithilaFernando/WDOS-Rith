@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon and icon settings -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <!-- Preconnects for performance -->
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font and external stylesheets -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/navigation.css">
+    <link rel="stylesheet" href="../styles/pharmacy.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <!-- FontAwesome icons -->
+    <script src="https://kit.fontawesome.com/6176231e60.js" crossorigin="anonymous"></script>
+    <title>Pharmacy Page</title>
+</head>
+<body>
+<section id="backgroundimage">
+    <header>
+        <nav>
+            <!-- Responsive navigation menu using checkbox -->
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars" aria-hidden="true"></i><!-- Hamburger icon -->
+            </label>
+            <label class="logo">Milan Care</label>
+            <ul>
+                <!-- Logo and navigation links -->
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="pharmacy.html" class="active">Pharmacy</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Main content starts here -->
+        <div class="wrapper">
+            <div class="inner">
+                <!-- Image to pharmacy -->
+                <div class="image-holder">
+                    <img src="../Images/pharmacy services.webp" alt="Image">
+                </div>
+                <!-- Pharmacy services form -->
+                <form action="">
+                    <h3>Pharmacy Services Form</h3>
+                    <div class="form-container">
+                        <!-- Name input fields -->
+                        <div class="form-group name-group">
+                            <div class="firstname">
+                                <label for="first-name" class="smallboxlbl">First Name</label>
+                                <input type="text" id="first-name" name="first-name" class="smallbox" required>
+                            </div>
+                            <div class="lastname">
+                                <label for="last-name" class="smallboxlbl">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" class="smallbox" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Address input field -->
+                            <label for="address" class="smallboxlbl">Address</label>
+                            <input type="text" id="address" name="address" class="medbox" required>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Contact number input field -->
+                            <label for="contact-number" class="smallboxlbl">Contact Number</label>
+                            <input type="tel" id="contact-number" name="contact-number" class="medbox" required>
+                        </div>
+
+                        <div class="form-group-quantity">
+                            <!-- Medicine selection and quantity -->
+                            <div class="form-group">
+                                <label for="medicine" class="smallboxlbl">Choose Medicine</label>
+                                <select id="medicine" name="medicine" class="medbox2" required>
+                                    <!-- Medicine options -->
+                                    <option value="" class="popup">Select a medicine</option>
+                                    <option value="amoxicillin">Amoxicillin 500mg</option>
+                                    <option value="metformin">Metformin 500mg</option>
+                                    <option value="lisinopril">Lisinopril 10mg</option>
+                                    <option value="atorvastatin">Atorvastatin 20mg</option>
+                                    <option value="albuterol">Albuterol Inhaler</option>
+                                    <option value="ibuprofen">Ibuprofen 400mg</option>
+                                    <option value="omeprazole">Omeprazole 20mg</option>
+                                    <option value="levothyroxine">Levothyroxine 50mcg</option>
+                                    <option value="amlodipine">Amlodipine 5mg</option>
+                                    <option value="ciprofloxacin">Ciprofloxacin 250mg</option>
+                                    <option value="hydrochlorothiazide">Hydrochlorothiazide 25mg</option>
+                                    <option value="simvastatin">Simvastatin 40mg</option>
+                                    <option value="clopidogrel">Clopidogrel 75mg</option>
+                                    <option value="sertraline">Sertraline 50mg</option>
+                                    <option value="tramadol">Tramadol 50mg</option>
+                                    <option value="prednisone">Prednisone 10mg</option>
+                                    <option value="warfarin">Warfarin 5mg</option>
+                                    <option value="montelukast">Montelukast 10mg</option>
+                                    <option value="fluoxetine">Fluoxetine 20mg</option>
+                                    <option value="glipizide">Glipizide 5mg</option>
+                                    <option value="glipizide">Glipizide 5mg</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <!-- Quantity input field -->
+                                <label for="quantity" class="smallboxlbl">Quantity</label>
+                                <input type="number" id="quantity" name="quantity" min="1" class="smallbox" required>
+                            </div>
+                        </div>
+
+                        <div class="method">
+                            <!-- Payment method radio buttons -->
+                            <label class="smallboxlbl">Payment Method</label><br>
+                            <label for="cash">
+                                <input type="radio" id="cash" name="payment-method" value="cash" required> Cash
+                            </label><br>
+                            <label for="credit">
+                                <input type="radio" id="credit" name="payment-method" value="credit" required> Credit
+                            </label><br>
+                        </div>
+
+                        <div class="form-buttons">
+                            <!-- Form buttons -->
+                            <div class="submitbtn">
+                                <button type="submit">Submit</button>
+                            </div>
+                            <div class="clearbtn">
+                                <button type="reset" class="clear">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Footer section starts -->
+        <div class="footer-container">
+            <div class="finding">
+                <h2 class="footer-h2">Find Us in</h2>
+                <!-- Footer section with addresses -->
+                <ul class="addresses">
+                    <li>454 Havelock Road, Colombo 06</li>
+                    <li>235 Galle Road, Colombo 03</li>
+                    <li>56B Sea Street, Colombo 11</li>
+                </ul>
+                <!-- Social media links -->
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <!-- Contact information in footer -->
+                <h2 class="footer-h2">Contact Us</h2>
+                <ul class="contact-list">
+                    <li><i class="fa fa-phone"></i> +94 11 2387545</li>
+                    <li><i class="fa fa-phone"></i> +94 11 3335566</li>
+                    <li><i class="fa fa-envelope"></i> info@milancare.lk</li>
+                    <li><i class="fa fa-envelope"></i> hirun@milancare.lk</li>
+                </ul>
+            </div>
+            <!-- Copyright information -->
+            <div class="footer-copyright">
+                <p>&copy; Copyright 2024 Milan Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section ends -->
+</body>
+</html>
